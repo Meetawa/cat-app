@@ -5,13 +5,17 @@ import DropdownMenu, { DropdownItem, DropdownItemGroup } from '@atlaskit/dropdow
 function App() {
   const [data,setData]=useState([])
   useEffect(()=>{
-    AP.request('/rest/api/3/priority').then((response)=>{
-      response.json().then((resp)=>{
-        setData(resp)
-      })
-    }).catch(e=>{
-      console.log(e)
-  })
+    AP.request({
+      url: "/rest/api/3/priority",
+      type: "GET",
+      success: response => { 
+        response = JSON.parse(response) 
+        setData(response) 
+      }, 
+      error: () => {  
+        console.log(arguments);
+      }
+    })
   },[])
   return (
       <DropdownMenu trigger="Priorities">
