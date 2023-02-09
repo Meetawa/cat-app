@@ -1,6 +1,5 @@
 import React,{useEffect,useState} from 'react'
-
-import DropdownMenu, { DropdownItem, DropdownItemGroup } from '@atlaskit/dropdown-menu';
+import ReportPriorities from './components/ReportPriorities'
 
 function App() {
   const [data,setData]=useState([])
@@ -18,15 +17,8 @@ function App() {
     })
   },[])
   return (
-      <DropdownMenu trigger="Priorities">
-        {
-          data.map((item,i)=>
-          <DropdownItemGroup key={i}>
-          <DropdownItem>{item.name}</DropdownItem>
-          </DropdownItemGroup>
-          )
-        }
-      </DropdownMenu>
+      <ReportPriorities 
+      data={data}/>
   );
 }
 export default App;
