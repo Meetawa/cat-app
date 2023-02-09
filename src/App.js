@@ -17,6 +17,7 @@ function App() {
     })
   },[])
   return (
+    <h2>DropDownMenu :</h2>
       <ReportPriorities 
       data={data}/>
   );
