@@ -1,5 +1,4 @@
-<h1>
-This is a small project to store some information about cats </h1>
+## <h1>This is a small project to store some information about cats </h1>
 
 ### DEMO
 
@@ -15,4 +14,5 @@ This is a small project to store some information about cats </h1>
 
 - [Twitter](https://twitter.com/rahumeetawa)
 - [LinkedIn](https://www.linkedin.com/in/rahul-saini-3950501a2/)
-  ***
+
+---
